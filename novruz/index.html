@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	
+<script type="text/javascript"> 
+
+
+
+function paxlava() {
+var novruz = new Date("March 21, 2017 00:01:00");
+var now=new Date();
+var qalib = novruz.getTime() - now.getTime();
+
+var san=Math.floor(qalib / 1000);
+var deq=Math.floor(san / 60);
+var saat=Math.floor(deq / 60);
+var gun=Math.floor(saat / 24);
+saat=saat%24;
+deq %= 60;
+san %=60;
+
+
+document.getElementById("gun").innerHTML=gun+ "<br />" +"  GUN";
+document.getElementById("saat").innerHTML=saat+ "<br />" +"  SAAT";
+document.getElementById("deq").innerHTML=deq+ "<br />" +"  DEQIQE";
+document.getElementById("san").innerHTML=san+ "<br />" +"  SANIYE";
+
+
+var saygac = setTimeout('paxlava()',1000);
+
+}
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+
+<div id="gun"></div>
+<div id="saat"></div>
+<div id="deq">DEQIQE</div>
+<div id="san">SANIYE</div>
+
+<script type="text/javascript">paxlava()</script>
+
+
+</body>
+</html>
